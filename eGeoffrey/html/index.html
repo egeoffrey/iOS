@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>eGeoffrey</title>
+    
+    <!-- jQuery -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    
+    <!-- jQuery-ui -->
+    <script src="lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="lib/jquery-ui/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="lib/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- overlayScrollbars -->
+    <script src="lib/overlayScrollbars/jquery.overlayScrollbars.min.js"></script>
+    <link rel="stylesheet" href="lib/overlayScrollbars/OverlayScrollbars.min.css">
+
+    <!-- AdminLTE (theme) -->
+    <script src="lib/adminlte/adminlte.js"></script>
+    <link rel="stylesheet" href="lib/adminlte/adminlte.css">
+    
+    <!-- Fonts -->
+    <link href="lib/fonts/fonts.css" rel="stylesheet">
+
+    <!-- Font Awesome (icons) -->
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+
+    <!-- Toastr (notify) -->
+    <script src="lib/toastr/toastr.min.js"></script>
+    <link rel="stylesheet" href="lib/toastr/toastr.min.css">
+
+    <!-- MQTT (gateway) -->
+    <script src="lib/mqtt/mqttws31.min.js"></script>
+
+    <!-- FastClick (speed up clicks) -->
+    <script src="lib/fastclick/fastclick.js"></script>
+
+    <!--  Touchspin (numeric input box with +/-) -->
+    <script src="lib/touchspin/touchspin.min.js"></script>
+    <link rel="stylesheet" href="lib/touchspin/touchspin.min.css" />
+
+    <!-- BoootstrapToggle (checkbox with toggle button) -->
+    <link href="lib/bootstrap-toggle/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="lib/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+
+    <!-- iCheck (large checkbox) -->
+    <script src="lib/icheck/icheck.min.js"></script>
+    <link rel="stylesheet" href="lib/icheck/square/blue.css" />
+
+    <!-- CodeMirror (yaml code editor) -->
+    <script src="lib/codemirror/codemirror.js"></script>
+    <link rel="stylesheet" href="lib/codemirror/codemirror.css" />
+    <script src="lib/codemirror/yaml.js"></script>
+
+    <!-- Bootbox (confirm modal) -->
+    <script src="lib/bootbox/bootbox.all.min.js"></script>
+    
+    <!-- DataTables (tables) -->
+    <link rel="stylesheet" href="lib/datatables/datatables.min.css" />
+    <script src="lib/datatables/datatables.min.js"></script>
+    <script src="lib/datatables/dataTables.colResize.js"></script>
+
+    <!--  dhtmlxscheduler (scheduler calendar) -->
+    <script src="lib/dhtmlxscheduler/dhtmlxscheduler.js"></script>
+    <script src="lib/dhtmlxscheduler/ext/dhtmlxscheduler_recurring.js"></script>
+    <script src="lib/dhtmlxscheduler/ext/dhtmlxscheduler_serialize.js"></script>
+    <script src="lib/dhtmlxscheduler/ext/dhtmlxscheduler_quick_info.js"></script>
+    <script src="lib/dhtmlxscheduler/ext/dhtmlxscheduler_key_nav.js"></script>
+    <script src="lib/dhtmlxscheduler/ext/dhtmlxscheduler_collision.js"></script>
+    <script src="lib/dhtmlxscheduler/ext/dhtmlxscheduler_minical.js"></script>
+    <script src="lib/dhtmlxscheduler/ext/dhtmlxscheduler_limit.js"></script>
+    <script src="lib/dhtmlxscheduler/ext/dhtmlxscheduler_responsive.js"></script>
+    <link rel="stylesheet" href="lib/dhtmlxscheduler/dhtmlxscheduler_flat.css" />
+    <link rel="stylesheet" href="lib/dhtmlxscheduler/ext/dhtmlxscheduler_responsive.css" />
+
+    <!--  Highstock (charts) -->
+    <script src="lib/highstock/highstock.js"></script>
+    <script src="lib/highstock/highcharts-more.js"></script>
+    <script src="lib/highstock/modules/exporting.js"></script>
+    <script src="lib/highstock/modules/offline-exporting.js"></script>
+
+    <!--  js-yaml (yaml encoder/decoder) -->
+    <script src="lib/js-yaml/js-yaml.min.js"></script>
+
+    <!--  eGeoffrey -->
+    <script src="sdk/javascript/constants.js"></script>
+    <script src="sdk/javascript/utils/strings.js"></script>
+    <script src="sdk/javascript/utils/datetimeutils.js"></script>
+    <script src="sdk/javascript/module/helpers/session.js"></script>
+    <script src="sdk/javascript/module/helpers/message.js"></script>
+    <script src="sdk/javascript/module/helpers/mqtt_client.js"></script>
+    <script src="sdk/javascript/module/module.js"></script>
+
+    <script src="gui/env.js"></script>
+    <script src="gui/language.js"></script>
+    <script src="gui/login.js"></script>
+    <script src="gui/gui.js"></script>
+    <script src="gui/widget.js"></script>
+    <script src="gui/menu.js"></script>
+    <script src="gui/toolbar.js"></script>
+    <script src="gui/page.js"></script>
+
+    <script src="gui/widgets/user/summary.js"></script>
+    <script src="gui/widgets/user/timeline.js"></script>
+    <script src="gui/widgets/user/range.js"></script>
+    <script src="gui/widgets/user/calendar.js"></script>
+    <script src="gui/widgets/user/value.js"></script>
+    <script src="gui/widgets/user/images.js"></script>
+    <script src="gui/widgets/user/maps.js"></script>
+    <script src="gui/widgets/user/text.js"></script>
+    <script src="gui/widgets/user/table.js"></script>
+    <script src="gui/widgets/user/counter.js"></script>
+    <script src="gui/widgets/user/tasks.js"></script>
+    <script src="gui/widgets/user/notifications.js"></script>
+    <script src="gui/widgets/user/chatbot.js"></script>
+    
+    <script src="gui/widgets/system/modules.js"></script>
+    <script src="gui/widgets/system/sensors.js"></script>
+    <script src="gui/widgets/system/logs.js"></script>
+    <script src="gui/widgets/system/rules.js"></script>
+    <script src="gui/widgets/system/configuration.js"></script>
+    <script src="gui/widgets/system/icons.js"></script>
+    <script src="gui/widgets/system/packages.js"></script>
+    <script src="gui/widgets/system/database.js"></script>
+    <script src="gui/widgets/system/gateway.js"></script>
+    <script src="gui/widgets/system/house.js"></script>
+
+    <script src="gui/widgets/wizard/sensor_wizard.js"></script>
+    <script src="gui/widgets/wizard/rule_wizard.js"></script>
+    <script src="gui/widgets/wizard/module_wizard.js"></script>
+    <script src="gui/widgets/wizard/menu_item_wizard.js"></script>
+    <script src="gui/widgets/wizard/menu_section_wizard.js"></script>
+</head>
+
+<style>
+    th.dt-center,
+    td.dt-center {
+        text-align: center;
+    }
+    
+    .center-block {
+        float: none !important
+    }
+    
+    .col-centered {
+        margin: 0 auto;
+        float: none;
+    }
+    
+    .modal-content {
+        height: auto;
+        border-radius: 0;
+    }
+    
+    .direct-chat-messages {
+        height: 365px;
+    }
+</style>
+
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+    <div class="wrapper">
+        
+        <!-- ### TOP BAR ### -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-sm-inline-block">
+                    <b><a id="house_name" class=" nav-link brand-text"></a></b>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a class="nav-link">|</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a id="house_time" class=" nav-link"></a>
+                </li>
+            </ul>
+
+            <!-- ### TOP-RIGHT TOOLBAR ### -->
+            <ul class="navbar-nav ml-auto" id="toolbar">
+            </ul>
+        </nav>
+
+        <!-- ### TOP-LEFT LOGO ### -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <a href="#" class="brand-link">
+                <img id="logo" src="img/logo.png" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">e<b>Geoffrey</b></span>
+            </a>
+
+            <!-- ### LEFT MENU ### -->
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <button type="button" class="btn btn-tool bg-info"><i id="user_icon" class="fas"></i></button>
+                    <div class="pull-left info">
+                        <a id="user_fullname" href="#" class="d-block"></a>
+                        <a id="status" class="d-block"><i class="fa fa-circle text-red"></i></a>
+                    </div>
+                </div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" id="menu">
+                    </ul>
+                </nav>
+                <div class="user-panel mt-0 pb-3 mb-3 d-flex"></div>
+                <div id="menu_edit">
+                </div>
+            </div>
+        </aside>
+
+        <!-- ### PAGE CONTENT  ### -->
+        <div class="content-wrapper" id="page_wrapper">
+        </div>
+
+        <!-- =============================================== -->
+
+        <!-- ### GENERIC POPUP  ### -->
+        <div class="modal fade modal-fullscreen force-fullscreen" id="popup">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12 center-block" id="popup_body"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="popup_close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ### WIZARD POPUP  ### -->
+        <div class="modal fade" id="wizard">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="wizard_title"></h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12 center-block" id="wizard_body"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default text-red d-none" id="wizard_delete"></button>
+                        <button type="button" class="btn btn-primary" id="wizard_save"></button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="wizard_close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ### LOGIN POPUP  ### -->
+        <div class="modal fade" id="login">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-body login-page">
+                        <div class="login-box">
+                            <div class="login-logo">
+                                <i class="fas fa-concierge-bell"></i> e<b>Geoffrey</b>
+                            </div>
+                            <div class="login-box-body" id="login_box">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ### CONTROL-SIDEBAR  ### -->
+    <aside class="control-sidebar control-sidebar-dark">
+    </aside>
+
+    <!-- ### FOOTER  ### -->
+    <footer class="main-footer">
+        <strong>Copyright &copy; 2019 <a href="http://www.egeoffrey.com" target="_new">eGeoffrey</a>.
+			</strong> All rights reserved.
+    </footer>
+    </div>
+
+    <script type="text/javascript">
+        var login = new Login()
+        // upon loading, load the gui
+        $(document).ready(function() {
+            login.load()
+        });
+    </script>
+</body>
+
+</html>
